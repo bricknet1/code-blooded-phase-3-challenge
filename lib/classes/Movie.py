@@ -18,6 +18,8 @@ class Movie:
     def set_title(self, title):
         if (isinstance(title, str)) and (0 < len(title)):
             self._title = title
+        else:
+            print("Must be a string longer than 0 characters")
 
     title = property(get_title, set_title)
 

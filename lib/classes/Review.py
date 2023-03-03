@@ -17,6 +17,8 @@ class Review:
     def set_rating(self, rating):
         if isinstance(rating, int) and (0 < rating < 6):
             self._rating = rating
+        else:
+            print("Must be an integer between 1 and 5")
 
     rating = property(get_rating, set_rating)
 
@@ -27,6 +29,8 @@ class Review:
         from classes.Viewer import Viewer
         if isinstance(viewer, Viewer):
             self._viewer = viewer
+        else:
+            print("Must be a Viewer object")
 
     viewer = property(get_viewer, set_viewer)
 
@@ -37,5 +41,7 @@ class Review:
         from classes.Movie import Movie
         if isinstance(movie, Movie):
             self._movie = movie
+        else:
+            print("Must be a Movie object")
 
     movie = property(get_movie, set_movie)
